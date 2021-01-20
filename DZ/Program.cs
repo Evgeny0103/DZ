@@ -11,6 +11,7 @@ namespace DZ
         static void Main(string[] args)
         {
             #region Пример №1
+            // Стас дурачок 
             #endregion
         }
     }
