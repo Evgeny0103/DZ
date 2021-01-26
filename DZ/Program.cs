@@ -20,7 +20,7 @@ namespace DZ
              */
 
 
-              /* int[,] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+            /*   int[,] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
                int hight = matrix.GetLength(0);
                int width = matrix.GetLength(1);
                for (int i = 0; i < hight; i++)
@@ -33,10 +33,9 @@ namespace DZ
                       }
                    }
                    Console.WriteLine();
-              
+
                }
-              */
-            
+            */
 
 
 
@@ -111,35 +110,53 @@ namespace DZ
              * состоящий из символов X и O, где Х — элементы кораблей, а О — свободные клетки.
              */
 
-            /* char[,] Seabattle = new char[10,10];
-             char sheep = 'X';
-             char FC = 'O';
-            Random rand = new Random();
+           /* char[][] array = new char[10][];
+            array[0] = new char[10];
+            array[1] = new char[10];
+            array[2] = new char[10];
+            array[3] = new char[10];
+            array[4] = new char[10];
+            array[5] = new char[10];
+            array[6] = new char[10];
+            array[7] = new char[10];
+            array[8] = new char[10];
+            array[9] = new char[10];
 
-             for (int i = 0; i < Seabattle.GetLength(0); i++) 
-             {
-                 for (int j = 0; j < Seabattle.GetLength(1); j++) 
-                 {
-                    
-                    if (rand.Next(Seabattle.GetLength(1)) == 1)
+            char sheep = 'X';
+            char fc = 'O';
+
+            Random random = new Random();
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = 0; j < array[i].Length; j++)
+                {
+                    array[i][j] = (char)random.Next(88, 90);
+                    if (array[i][j] == 88)
                     {
-                        Seabattle[i, j] = sheep;
+                        array[i][j] = sheep;
                     }
                     else
                     {
-                        Seabattle[i,j] = FC;
+                        array[i][j] = fc;
                     }
-                       Console.Write($"{Seabattle[i, j]} \t");
+                }
 
-                 }
-                 Console.WriteLine();
-             }
-            */
+            }
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = 0; j < array[i].Length; j++)
+                {
+                    Console.Write($"{array[i][j]}");
+                }
+                Console.WriteLine();
+           */
+                #endregion
 
-            #endregion
+            
 
-
-
+            }
         }
     }
 }
+
