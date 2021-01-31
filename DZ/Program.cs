@@ -6,157 +6,176 @@ using System.Threading.Tasks;
 
 namespace DZ
 {
+
     class Program
     {
+        #region Пример №1
 
-        static void Main(string[] args)
+        /*
+         * Написать метод GetFullName(string firstName, string lastName, string patronymic), 
+         * принимающий на вход ФИО в разных аргументах и возвращающий объединённую строку с ФИО. 
+         * Используя метод, написать программу, выводящую в консоль 3–4 разных ФИО.
+         */
 
-        {
-            #region Пример №1
-            /*
-             
-            Написать программу, выводящую элементы двумерного массива по диагонали.
+        /* static void Main(string[] args)
 
+         {
+
+             Console.WriteLine(GetFullName("Иванов", "Иван", "Иванович"));
+             Console.WriteLine(GetFullName("Петров", "Петр", "Петрович"));
+             Console.WriteLine(GetFullName("Панов", "Иван", "Алексеевич"));
+
+         }
+
+         static string GetFullName(string firstname, string lastname, string patronymic) 
+         {
+
+             return $"Ваше полное имя {firstname} {lastname} {patronymic}"; 
+         }
+
+         */
+        #endregion
+
+        #region Пример №2
+        /* static void Main(string[] args) 
+         {
+             /*
+              Написать программу, принимающую на вход строку — набор чисел, 
+             разделенных пробелом, и возвращающую число — сумму всех чисел в строке. 
+             Ввести данные с клавиатуры и вывести результат на экран.
              */
-
-
-            /*   int[,] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
-               int hight = matrix.GetLength(0);
-               int width = matrix.GetLength(1);
-               for (int i = 0; i < hight; i++)
-               {
-                   for (int j = 0; j < width; j++)
-                   {
-                      if (i == j) 
-                      {
-                          Console.Write($"{matrix[i, j]}");
-                      }
-                   }
-                   Console.WriteLine();
-
-               }
-            */
-
-
-
-            #endregion
-
-            #region Пример №2
-
-            /*
-             * Написать программу «Телефонный справочник»: 
-             * создать двумерный массив 5х2, 
-             * хранящий список телефонных контактов: 
-             * первый элемент хранит имя контакта, 
-             * второй — номер телефона/email. 
-             * 
-             */
-
-
-
-            /*string[,] phoneNumber = new string[5, 2];
-            for (int i = 0; i < phoneNumber.GetLongLength(0); i++)
-            {
-                for (int j = 0; j < phoneNumber.GetLongLength(1); j++)
-                {   // Сначала вводим имя потом Enter потом номер
-                    Console.WriteLine($"name + {i} phone {j}");
-                    phoneNumber[i, j] = Console.ReadLine();
-                }
-              
-            }
-
-            Console.WriteLine();
-
-
-            for (int i = 0; i < phoneNumber.GetLongLength(0); i++)
-            {
-                for (int j = 0; j < phoneNumber.GetLongLength(1); j++)
-                {
-                    Console.Write($"{phoneNumber[i, j]}\t");
-                }
-                Console.WriteLine();
-
-            }
-
-            */
-            #endregion
-
-            #region Пример №3
-            /* 
-             * Написать программу, выводящую введённую пользователем строку
-             * в обратном порядке(olleH вместо Hello).
-            */
-
-            // Вариант 1
-            /* char[] a = "Hello".ToCharArray();
-             Array.Reverse(a);
-             string s = new string(a);
-             Console.WriteLine(s);
-
-             // Вариант 2
-             string slovo = Console.ReadLine();
-             string reverse = string.Empty;
-             for (int i = slovo.Length - 1; i > -1; i--)
-                 reverse += slovo[i];
-             Console.WriteLine(reverse);
-            */
-
-
-            #endregion
-
-            #region Пример № 4
-            /*
-             * *«Морской бой»: вывести на экран массив 10х10, 
-             * состоящий из символов X и O, где Х — элементы кораблей, а О — свободные клетки.
-             */
-
-           /* char[][] array = new char[10][];
-            array[0] = new char[10];
-            array[1] = new char[10];
-            array[2] = new char[10];
-            array[3] = new char[10];
-            array[4] = new char[10];
-            array[5] = new char[10];
-            array[6] = new char[10];
-            array[7] = new char[10];
-            array[8] = new char[10];
-            array[9] = new char[10];
-
-            char sheep = 'X';
-            char fc = 'O';
-
-            Random random = new Random();
-
-            for (int i = 0; i < array.Length; i++)
-            {
-                for (int j = 0; j < array[i].Length; j++)
-                {
-                    array[i][j] = (char)random.Next(88, 90);
-                    if (array[i][j] == 88)
-                    {
-                        array[i][j] = sheep;
-                    }
-                    else
-                    {
-                        array[i][j] = fc;
-                    }
-                }
-
-            }
-            for (int i = 0; i < array.Length; i++)
-            {
-                for (int j = 0; j < array[i].Length; j++)
-                {
-                    Console.Write($"{array[i][j]}");
-                }
-                Console.WriteLine();
-           */
-                #endregion
-
-            
-
-            }
+        /*  Console.WriteLine("Введите пожалуйста любые цифры, через пробел");
+           string stroka = Console.ReadLine();
+           var ints = stroka.Split(' ').Select(Int32.Parse).ToArray();
+           int count = 0;
+           for (var i = 0; i < ints.Length; i++)
+           {
+               count = ints[i] + count;
+           }
+           Console.WriteLine($"Суммма введеных вами чисел равна : {count}");
         }
+        */
+
+        #endregion
+
+        #region Пример №3
+        /*    public enum Season 
+             {
+               Wintrer = 1,
+               Spring,
+               Summer,
+               Autumn
+            }
+
+
+
+
+
+            static void Main(string[] args) 
+            {
+                /*
+                 * 
+                 *Написать метод по определению времени года. На вход подаётся число – порядковый номер месяца. 
+                 *На выходе — значение из перечисления (enum) — Winter, Spring, Summer, Autumn. 
+                 *Написать метод, принимающий на вход значение из этого перечисления и возвращающий 
+                 *название времени года (зима, весна, лето, осень). 
+                 *Используя эти методы, ввести с клавиатуры номер месяца и вывести название времени года. 
+                 *Если введено некорректное число, вывести в консоль текст «Ошибка: введите число от 1 до 12».
+                 */
+
+        /* Console.WriteLine("Здравствуйте введите пожалуйста число от 1 до 12");
+         int number = int.Parse(Console.ReadLine());
+         GetMonth(number);
+
+
+
+
+     }
+
+     static  void  GetMonth(int number) 
+     {  
+         switch (number) 
+         {
+             case 12:
+             case 1:
+             case 2:
+                 Console.WriteLine(Season.Wintrer);
+                 break;
+             case 3:
+             case 4:
+             case 5:
+                 Console.WriteLine(Season.Spring);
+                 break;
+             case 6:
+             case 7:
+             case 8:
+                 Console.WriteLine(Season.Summer);
+                 break;
+             case 9:
+             case 10:
+             case 11:
+                 Console.WriteLine(Season.Autumn);
+                 break;
+             default:
+                 Console.WriteLine("Ошибка : введите пожалуйста число от 1 до 12 ");
+                 break;
+         }
+
+
+     }
+
+
+
+
+
+
+   }
+        */
+
+        #endregion
+
+        #region Пример №4
+
+        /*
+         * (*) Написать программу, вычисляющую число Фибоначчи для заданного значения рекурсивным способом. 
+
+         */
+
+        /* static void Main(string[] args)
+         {
+             Console.WriteLine(Fibonachi(12));
+             Console.WriteLine(Fibonachi2(12));
+         }
+
+         static int Fibonachi(int n)
+         {
+             int a = 0;
+             int b = 1;
+             int tmp;
+
+             for (int i = 0; i < n; i++)
+             {
+                 tmp = a;
+                 a = b;
+                 b += tmp;
+             }
+
+             return a;
+         }
+
+         static int Fibonachi2(int n)
+         {
+             if (n == 0 || n == 1)
+             {
+                 return n;
+             }
+             else
+             {
+                 return Fibonachi(n - 1) + Fibonachi(n - 2);
+             }
+         }
+         */
+        #endregion
+
     }
 }
-
